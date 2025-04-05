@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cube
   m_EditorClassIdentifier: 
   prefab: {fileID: 852883993392114040, guid: c4e1cf10ffbc6a3468886b3e3ce4f773, type: 3}
-  spawnFrequencySec: 0.5
+  spawnFrequencySec: 0.05
   spawnProbability: 1
   spawningLanes: 00000000010000000200000003000000
   offset: 0.05

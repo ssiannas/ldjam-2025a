@@ -42,7 +42,6 @@ namespace ldjam_hellevator
             
         }
 
-
         private void OnDrawGizmos()
         {
             // draw the game area
