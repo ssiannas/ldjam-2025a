@@ -21,38 +21,38 @@ namespace ldjam_hellevator
         // Update is called once per frame
         void Update()
         {
-            increaseGravity();
-            moveInput = getStreeringInput();
-            increaseScore();
+            //IncreaseGravity();
+            moveInput = GetStreeringInput();
+            IncreaseScore();
         }
 
 
         void FixedUpdate()
         {
-            steer();
+            Steer();
         }
 
 
-        void increaseGravity()
+        void IncreaseGravity()
         {
             fallSpeed += gravityIncreaseRate * Time.deltaTime;
             rb.linearVelocityY = -1 * fallSpeed;
             //transform.position += Vector3.down * fallSpeed * Time.deltaTime;
         }
 
-        float getStreeringInput()
+        float GetStreeringInput()
         {
             return Input.GetAxis("Horizontal");
         }
 
-        void steer()
+        void Steer()
         {
             Vector2 velocity = rb.linearVelocity;
             velocity.x = moveInput * moveSpeed;
             rb.linearVelocityX = velocity.x;
         }
 
-        void increaseScore()
+        void IncreaseScore()
         {
             ScoreManager.Instance.SetScore(Mathf.RoundToInt(Mathf.Abs(transform.position.y - startPos.y)));
         }
