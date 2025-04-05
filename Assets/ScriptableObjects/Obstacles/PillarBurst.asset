@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e98ee77c391efc946b051e75038a5022, type: 3}
   m_Name: PillarBurst
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
-  spawnFrequencySec: 0.5
-  spawnProbability: 1
+  prefab: {fileID: 6472464292656940515, guid: a8d8f5996135e2c42bc7537a2235849f, type: 3}
+  spawnFrequencySec: 4
+  spawnProbability: 0.5
   spawningLanes: 00000000010000000200000003000000
-  offset: 0.5
+  offset: 0
