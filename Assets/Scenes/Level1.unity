@@ -132,8 +132,16 @@ PrefabInstance:
       value: 7.298649
       objectReference: {fileID: 0}
     - target: {fileID: 3963276574271522957, guid: 63612e8773a43ab47a782b913ab54ea9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 9.926173
+      objectReference: {fileID: 0}
+    - target: {fileID: 3963276574271522957, guid: 63612e8773a43ab47a782b913ab54ea9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.096
+      objectReference: {fileID: 0}
+    - target: {fileID: 3963276574271522957, guid: 63612e8773a43ab47a782b913ab54ea9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.4365
       objectReference: {fileID: 0}
     - target: {fileID: 4192810706431635716, guid: 63612e8773a43ab47a782b913ab54ea9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -441,7 +449,7 @@ Transform:
   m_GameObject: {fileID: 1770319766}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06, y: 3.55, z: 0}
+  m_LocalPosition: {x: 0.24, y: 4.2, z: 0}
   m_LocalScale: {x: 0.08256335, y: 0.08256335, z: 0.08256335}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -463,6 +471,7 @@ MonoBehaviour:
   gravityIncreaseRate: 0.1
   moveSpeed: 5
   scoreManagerChannel: {fileID: 11400000, guid: 3809418ae24f3bd4f9cd7def0c688f9c, type: 2}
+  pointRate: 1
 --- !u!50 &1770319771
 Rigidbody2D:
   serializedVersion: 5
