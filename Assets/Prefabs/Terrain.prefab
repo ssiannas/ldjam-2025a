@@ -462,7 +462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacles:
   - {fileID: 11400000, guid: 2243ccb8a734a574c85b180f3f8ed3c0, type: 2}
-  - {fileID: 11400000, guid: dbb8c9e810c7b974d817de1a3427e340, type: 2}
+  - {fileID: 11400000, guid: b3b1b1f6b6560c547adc2922bade93f0, type: 2}
   gameArea: {fileID: 1500870019598046925}
 --- !u!1 &2792401187159970454
 GameObject:
@@ -491,7 +491,7 @@ Transform:
   m_GameObject: {fileID: 2792401187159970454}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.14, y: 8.32, z: 2.5447512}
+  m_LocalPosition: {x: 0.14, y: 15.14, z: 2.5447512}
   m_LocalScale: {x: 20.75, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
