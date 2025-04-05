@@ -4794,6 +4794,7 @@ MonoBehaviour:
   highScoreText: {fileID: 1955376369}
   scorePrefix: 'Score: 0'
   highScorePrefix: 'High Score: 0'
+  scoreManagerChannel: {fileID: 0}
   highScore: 0
 --- !u!4 &628832675
 Transform:
@@ -12528,6 +12529,7 @@ MonoBehaviour:
   fallSpeed: 5
   gravityIncreaseRate: 1
   moveSpeed: 10
+  scoreManagerChannel: {fileID: 11400000, guid: 3809418ae24f3bd4f9cd7def0c688f9c, type: 2}
 --- !u!58 &1841698993
 CircleCollider2D:
   m_ObjectHideFlags: 0

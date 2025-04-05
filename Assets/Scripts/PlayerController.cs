@@ -11,9 +11,9 @@ namespace ldjam_hellevator
         private float moveInput;
         [SerializeField] private float moveSpeed = 5f;
         private Vector3 startPos;
-        
-        [SerializeField]
-        private ScoreManagerChannel scoreManagerChannel;
+
+        [SerializeField] private ScoreManagerChannel scoreManagerChannel;
+        [SerializeField] private int pointRate = 1;
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
@@ -35,21 +35,17 @@ namespace ldjam_hellevator
         {
             //IncreaseGravity();
             moveInput = GetStreeringInput();
-            IncreaseScore();
         }
-
 
         void FixedUpdate()
         {
             Steer();
         }
 
-
         void IncreaseGravity()
         {
             fallSpeed += gravityIncreaseRate * Time.deltaTime;
             rb.linearVelocityY = -1 * fallSpeed;
-            //transform.position += Vector3.down * fallSpeed * Time.deltaTime;
         }
 
         float GetStreeringInput()
@@ -62,11 +58,6 @@ namespace ldjam_hellevator
             Vector2 velocity = rb.linearVelocity;
             velocity.x = moveInput * moveSpeed;
             rb.linearVelocityX = velocity.x;
-        }
-
-        void IncreaseScore()
-        {
-            scoreManagerChannel.SetScore(Mathf.RoundToInt(Mathf.Abs(transform.position.y - startPos.y)));
         }
     }
 }

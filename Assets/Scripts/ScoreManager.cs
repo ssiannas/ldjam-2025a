@@ -11,7 +11,8 @@ namespace ldjam_hellevator
 
         [SerializeField] private TMP_Text highScoreText;
 
-        [Header("Settings")] [SerializeField] private string scorePrefix = "Score: ";
+        [Header("Settings")] 
+        [SerializeField] private string scorePrefix = "Score: ";
         [SerializeField] private string highScorePrefix = "High: ";
         
         [SerializeField] private ScoreManagerChannel scoreManagerChannel;
@@ -21,10 +22,23 @@ namespace ldjam_hellevator
 
         private void Awake()
         {
+
+            DontDestroyOnLoad(this);
+            if (scoreManagerChannel == null)
+            {
+                throw new System.Exception("No Score Manager Channel Assigned");
+            }
+            scoreManagerChannel.OnAddPoints += AddPoints;
             LoadHighScore();
             UpdateScoreDisplay();
             UpdateHighScoreDisplay();
         }
+
+        public void LateUpdate()
+        {
+            AddPoints(1);
+        }
+
 
         public void AddPoints(int points)
         {
