@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e98ee77c391efc946b051e75038a5022, type: 3}
-  m_Name: Demon1
+  m_Name: DemonSmall
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4977949212336867161, guid: bb2056a95f6554d4599abb1d139d5496, type: 3}
-  spawnFrequencySec: 6.5
-  spawnProbability: 0.45
-  spawningLanes: 0000000003000000
-  offset: 0.1
+  prefab: {fileID: 538986194949217109, guid: 21eb764923339414c8fbd115858027c1, type: 3}
+  spawnFrequencySec: 4.5
+  spawnProbability: 0.5
+  spawningLanes: 00000000010000000200000003000000
+  offset: 0.5
