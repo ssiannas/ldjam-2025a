@@ -16,4 +16,4 @@ MonoBehaviour:
   spawnFrequencySec: 0.1
   spawnProbability: 1
   spawningLanes: 00000000010000000200000003000000
-  offset: 0
+  offset: 1
