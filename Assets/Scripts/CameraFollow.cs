@@ -1,18 +1,22 @@
 using UnityEngine;
 
-public class CameraController : MonoBehaviour
+namespace ldjam_hellevator
 {
-    public Transform target;          
-    private float yOffset = 3.9f;       
-
-
-    void Update()
+    public class CameraController : MonoBehaviour
     {
-        if (target != null)
+        public Transform target;
+        private float yOffset = 3.9f;
+
+
+        void Update()
         {
-            //Vector3 newPos = transform.position;
-            //newPos.y = Mathf.Lerp(transform.position.y, target.position.y + yOffset, followSpeed * Time.deltaTime);
-            transform.position = new Vector3(transform.position.x, target.transform.position.y - yOffset, transform.position.z);
+            if (target != null)
+            {
+                //Vector3 newPos = transform.position;
+                //newPos.y = Mathf.Lerp(transform.position.y, target.position.y + yOffset, followSpeed * Time.deltaTime);
+                transform.position = new Vector3(transform.position.x, target.transform.position.y - yOffset,
+                    transform.position.z);
+            }
         }
     }
 }

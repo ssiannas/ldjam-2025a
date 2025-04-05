@@ -1,94 +1,97 @@
 using UnityEngine;
 using TMPro;
 
-public class ScoreManager : MonoBehaviour
+namespace ldjam_hellevator
 {
-    public static ScoreManager Instance { get; private set; }
-
-    [Header("UI References")]
-    [SerializeField] private TMP_Text scoreText;
-    [SerializeField] private TMP_Text highScoreText;
-
-    [Header("Settings")]
-    [SerializeField] private string scorePrefix = "Score: ";
-    [SerializeField] private string highScorePrefix = "High: ";
-
-    private int _currentScore = 0;
-    public int highScore = 0;
-
-    private void Awake()
+    public class ScoreManager : MonoBehaviour
     {
-        // Singleton pattern
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject); // Optional: persists between scenes
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
+        public static ScoreManager Instance { get; private set; }
 
-        LoadHighScore();
-        UpdateScoreDisplay();
-        UpdateHighScoreDisplay();
-    }
+        [Header("UI References")] [SerializeField]
+        private TMP_Text scoreText;
 
-    public void AddPoints(int points)
-    {
-        _currentScore += points;
+        [SerializeField] private TMP_Text highScoreText;
 
-        if (_currentScore > highScore)
+        [Header("Settings")] [SerializeField] private string scorePrefix = "Score: ";
+        [SerializeField] private string highScorePrefix = "High: ";
+
+        private int _currentScore = 0;
+        public int highScore = 0;
+
+        private void Awake()
         {
-            highScore = _currentScore;
-            SaveHighScore();
+            // Singleton pattern
+            if (Instance == null)
+            {
+                Instance = this;
+                DontDestroyOnLoad(gameObject); // Optional: persists between scenes
+            }
+            else
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            LoadHighScore();
+            UpdateScoreDisplay();
             UpdateHighScoreDisplay();
         }
 
-        UpdateScoreDisplay();
-    }
-
-
-    public void SetScore(int score)
-    {
-        _currentScore = score;
-        if (_currentScore > highScore)
+        public void AddPoints(int points)
         {
-            highScore = _currentScore;
-            SaveHighScore();
-            UpdateHighScoreDisplay();
+            _currentScore += points;
+
+            if (_currentScore > highScore)
+            {
+                highScore = _currentScore;
+                SaveHighScore();
+                UpdateHighScoreDisplay();
+            }
+
+            UpdateScoreDisplay();
         }
 
-        UpdateScoreDisplay();
-    }
 
-    public void ResetScore()
-    {
-        _currentScore = 0;
-        UpdateScoreDisplay();
-    }
+        public void SetScore(int score)
+        {
+            _currentScore = score;
+            if (_currentScore > highScore)
+            {
+                highScore = _currentScore;
+                SaveHighScore();
+                UpdateHighScoreDisplay();
+            }
 
-    private void UpdateScoreDisplay()
-    {
-        if (scoreText != null)
-            scoreText.text = $"Score: {_currentScore}";
-    }
+            UpdateScoreDisplay();
+        }
 
-    private void UpdateHighScoreDisplay()
-    {
-        if (highScoreText != null)
-            highScoreText.text = $"High Score: {highScore}";
-    }
+        public void ResetScore()
+        {
+            _currentScore = 0;
+            UpdateScoreDisplay();
+        }
 
-    private void LoadHighScore()
-    {
-        highScore = PlayerPrefs.GetInt("HighScore", 0);
-    }
+        private void UpdateScoreDisplay()
+        {
+            if (scoreText != null)
+                scoreText.text = $"Score: {_currentScore}";
+        }
 
-    private void SaveHighScore()
-    {
-        PlayerPrefs.SetInt("HighScore", highScore);
-        PlayerPrefs.Save();
+        private void UpdateHighScoreDisplay()
+        {
+            if (highScoreText != null)
+                highScoreText.text = $"High Score: {highScore}";
+        }
+
+        private void LoadHighScore()
+        {
+            highScore = PlayerPrefs.GetInt("HighScore", 0);
+        }
+
+        private void SaveHighScore()
+        {
+            PlayerPrefs.SetInt("HighScore", highScore);
+            PlayerPrefs.Save();
+        }
     }
 }
