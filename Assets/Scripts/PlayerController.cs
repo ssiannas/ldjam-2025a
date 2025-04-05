@@ -13,7 +13,9 @@ namespace ldjam_hellevator
         [SerializeField] private float moveSpeed = 5f;
         private Vector3 startPos;
 
+        [Header("Channels")]
         [SerializeField] private ScoreManagerChannel scoreManagerChannel;
+        [SerializeField] private UiManagerChannel uiManagerChannel;
         [SerializeField] private int pointRate = 1;
 
         private SpriteRenderer _spriteRenderer;
@@ -39,6 +41,10 @@ namespace ldjam_hellevator
             if (scoreManagerChannel == null)
             {
                 throw new Exception("No Score Manager Channel Assigned");
+            }
+            if (uiManagerChannel == null)
+            {
+                throw new Exception("No UI Manager Channel Assigned");
             }
         }
 
@@ -85,6 +91,8 @@ namespace ldjam_hellevator
 
             currentLives--;
             Debug.Log("Player hit! Lives left: " + currentLives);
+
+            uiManagerChannel.UpdateHearts(currentLives);
 
             if (currentLives <= 0)
             {
