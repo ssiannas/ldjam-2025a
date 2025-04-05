@@ -119,29 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &70148700 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8326693017351131519, guid: 079fe1ac25750b34ea754e059545aa65, type: 3}
-  m_PrefabInstance: {fileID: 5480701356406675017}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &70148704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70148700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf3f6c8d0a59d294b9baae004183758d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heart1: {fileID: 0}
-  heart2: {fileID: 0}
-  heart3: {fileID: 0}
-  fullHeart: {fileID: 0}
-  emptyHeart: {fileID: 0}
-  uiManagerChannel: {fileID: 0}
 --- !u!1 &582108898 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6238180767367132497, guid: 7ca3ecdb576242440bcc9e56a15f228f, type: 3}
@@ -322,18 +299,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1719208305997981710, guid: 63612e8773a43ab47a782b913ab54ea9, type: 3}
-      propertyPath: obstacles.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1719208305997981710, guid: 63612e8773a43ab47a782b913ab54ea9, type: 3}
-      propertyPath: 'obstacles.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: b3b1b1f6b6560c547adc2922bade93f0, type: 2}
-    - target: {fileID: 1719208305997981710, guid: 63612e8773a43ab47a782b913ab54ea9, type: 3}
-      propertyPath: 'obstacles.Array.data[2]'
-      value: 
-      objectReference: {fileID: 11400000, guid: b3b1b1f6b6560c547adc2922bade93f0, type: 2}
     - target: {fileID: 4192810706431635716, guid: 63612e8773a43ab47a782b913ab54ea9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.07408306
@@ -374,13 +339,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4385469454882890134, guid: 63612e8773a43ab47a782b913ab54ea9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 15.14
+    - target: {fileID: 4237558666631719297, guid: 63612e8773a43ab47a782b913ab54ea9, type: 3}
+      propertyPath: speed
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8133072754637997646, guid: 63612e8773a43ab47a782b913ab54ea9, type: 3}
       propertyPath: m_Name
       value: Terrain
+      objectReference: {fileID: 0}
+    - target: {fileID: 8226024245366519187, guid: 63612e8773a43ab47a782b913ab54ea9, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8330466583695477553, guid: 63612e8773a43ab47a782b913ab54ea9, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8740224324302356837, guid: 63612e8773a43ab47a782b913ab54ea9, type: 3}
+      propertyPath: speed
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -677,10 +654,6 @@ PrefabInstance:
       propertyPath: highScoreText
       value: 
       objectReference: {fileID: 1029144874}
-    - target: {fileID: 5654592830167115107, guid: 079fe1ac25750b34ea754e059545aa65, type: 3}
-      propertyPath: scoreManagerChannel
-      value: 
-      objectReference: {fileID: 11400000, guid: 3809418ae24f3bd4f9cd7def0c688f9c, type: 2}
     - target: {fileID: 8326693017351131519, guid: 079fe1ac25750b34ea754e059545aa65, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -688,10 +661,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8326693017351131519, guid: 079fe1ac25750b34ea754e059545aa65, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 70148704}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 079fe1ac25750b34ea754e059545aa65, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
