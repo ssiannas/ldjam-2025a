@@ -12102,7 +12102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallSpeed: 5
-  gravityIncreaseRate: 0.5
+  gravityIncreaseRate: 1
   moveSpeed: 10
 --- !u!58 &1841698993
 CircleCollider2D:
