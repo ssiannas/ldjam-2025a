@@ -200,8 +200,8 @@ Transform:
   m_GameObject: {fileID: 533130222}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0851, y: -0.0193, z: 0}
-  m_LocalScale: {x: 11.524451, y: 9.912195, z: 1}
+  m_LocalPosition: {x: -0.2373, y: -0.0309, z: 0}
+  m_LocalScale: {x: 16.98386, y: 9.934885, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -474,9 +474,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6af6434f5bb0254296740e29ccf67db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefabs: []
+  obstacles:
+  - {fileID: 11400000, guid: dbb8c9e810c7b974d817de1a3427e340, type: 2}
+  - {fileID: 11400000, guid: 2243ccb8a734a574c85b180f3f8ed3c0, type: 2}
   gameArea: {fileID: 533130222}
-  showLanes: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
