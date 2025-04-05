@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Demon1
   m_EditorClassIdentifier: 
   prefab: {fileID: 4977949212336867161, guid: bb2056a95f6554d4599abb1d139d5496, type: 3}
-  spawnFrequencySec: 6.5
-  spawnProbability: 0.45
+  spawnFrequencySecDefault: 4.5
+  spawnProbabilityDefault: 0.5
   spawningLanes: 0000000003000000
   offset: 0.1
+  difficultyThreshold: 25

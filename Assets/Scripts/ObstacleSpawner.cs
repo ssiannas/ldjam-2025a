@@ -53,9 +53,9 @@ namespace ldjam_hellevator
 
         IEnumerator SpawnRoutine(Obstacle obstacle)
         {
-            yield return new WaitForSeconds(obstacle.spawnFrequencySec);
+            yield return new WaitForSeconds(obstacle.SpawnFrequencySec);
             var probability = Random.Range(0f, 1f);
-            if (probability < obstacle.spawnProbability)
+            if (probability < obstacle.SpawnProbability)
             {
                 var lane = obstacle.spawningLanes[Random.Range(0, obstacle.spawningLanes.Count)];
                 var laneCoordinate = _laneCoordinates[lane];

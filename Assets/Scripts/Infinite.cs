@@ -1,11 +1,12 @@
+using ldjam_hellevator;
 using UnityEngine;
 
 public class Infinite : MonoBehaviour
 {
     Material mat;
     float distance = 0;
-
-    public float speed=2f;
+    
+    [SerializeField] private WallData wallData;
 
     void Start()
     {
@@ -15,7 +16,7 @@ public class Infinite : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distance += Time.deltaTime*speed;
+        distance += Time.deltaTime * wallData.currentWallSpeed;
         mat.SetTextureOffset("_MainTex",Vector2.down*distance);
     }
 }

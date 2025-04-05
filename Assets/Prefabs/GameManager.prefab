@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 770101953681588711}
   - component: {fileID: 1103641542550351838}
   - component: {fileID: 5654592830167115107}
+  - component: {fileID: 6281474108565357720}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -65,3 +66,23 @@ MonoBehaviour:
   scoreManagerChannel: {fileID: 11400000, guid: 3809418ae24f3bd4f9cd7def0c688f9c, type: 2}
   highScore: 0
   scoreTimer: 0.75
+--- !u!114 &6281474108565357720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8326693017351131519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20fa4ef338cd89049b92e1534a006e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreManagerChannel: {fileID: 11400000, guid: 3809418ae24f3bd4f9cd7def0c688f9c, type: 2}
+  difficultyIncreaseInterval: 10
+  obstacles:
+  - {fileID: 11400000, guid: f2444d5042a8caa44aef46330ed0ec2d, type: 2}
+  - {fileID: 11400000, guid: 49505cdf86f04684b896e18cc71bea49, type: 2}
+  - {fileID: 11400000, guid: 2243ccb8a734a574c85b180f3f8ed3c0, type: 2}
+  - {fileID: 11400000, guid: b3b1b1f6b6560c547adc2922bade93f0, type: 2}
+  wallData: {fileID: 11400000, guid: bc0d06eb3d2b556488a936404316ac01, type: 2}
