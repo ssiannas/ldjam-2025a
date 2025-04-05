@@ -18,10 +18,13 @@ namespace ldjam_hellevator
             gmChannel.OnGameStart += StartGame;
         }
 
-        void StartGame()
+        public void StartGame()
         {
             SceneManager.LoadScene(firstLevel);
         }
-
+        public void QuitGame()
+        {
+            Application.Quit();
+        }
     }
 }
