@@ -463,6 +463,7 @@ MonoBehaviour:
   obstacles:
   - {fileID: 11400000, guid: 2243ccb8a734a574c85b180f3f8ed3c0, type: 2}
   - {fileID: 11400000, guid: b3b1b1f6b6560c547adc2922bade93f0, type: 2}
+  - {fileID: 11400000, guid: f2444d5042a8caa44aef46330ed0ec2d, type: 2}
   gameArea: {fileID: 1500870019598046925}
 --- !u!1 &2792401187159970454
 GameObject:
