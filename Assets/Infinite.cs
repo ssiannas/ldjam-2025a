@@ -16,7 +16,6 @@ public class Infinite : MonoBehaviour
     void Update()
     {
         distance += Time.deltaTime*speed;
-        Debug.Log(mat.name);
-        mat.SetTextureOffset("_MainTex",Vector2.up*distance);
+        mat.SetTextureOffset("_MainTex",Vector2.down*distance);
     }
 }
