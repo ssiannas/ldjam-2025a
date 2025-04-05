@@ -117,12 +117,12 @@ namespace ldjam_hellevator
             float flashDelay = 0.2f;
             for (float i = 0; i < invulnerabilityDuration; i += flashDelay)
             {
-                if (_spriteRenderer != null)
+                if (_spriteRenderer is not null)
                     _spriteRenderer.enabled = !_spriteRenderer.enabled;
                 yield return new WaitForSeconds(flashDelay);
             }
 
-            if (_spriteRenderer != null)
+            if (_spriteRenderer is not null)
                 _spriteRenderer.enabled = true;
 
             isInvulnerable = false;
@@ -137,6 +137,10 @@ namespace ldjam_hellevator
                 TakeDamage();
             }
             else if (collision.gameObject.tag == "Pillar")
+            {
+                TakeDamage();
+            }
+            else if (collision.gameObject.tag == "Demon1")
             {
                 TakeDamage();
             }

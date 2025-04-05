@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Bullet
   - Pillar
+  - Demon1
+  - Destructible
   layers:
   - Default
   - TransparentFX
