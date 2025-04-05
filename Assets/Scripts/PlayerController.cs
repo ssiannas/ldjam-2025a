@@ -7,11 +7,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float gravityIncreaseRate = 0.1f;
     private float moveInput;
     [SerializeField] private float moveSpeed = 5f;
+    private Vector3 startPos;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        startPos = transform.position;
     }
 
     // Update is called once per frame
@@ -19,6 +21,7 @@ public class PlayerController : MonoBehaviour
     {
         increaseGravity();
         moveInput = getStreeringInput();
+        increaseScore();
     }
 
 
@@ -45,5 +48,10 @@ public class PlayerController : MonoBehaviour
         Vector2 velocity = rb.linearVelocity;
         velocity.x = moveInput * moveSpeed;
         rb.linearVelocityX = velocity.x;
+    }
+
+    void increaseScore()
+    {
+        ScoreManager.Instance.SetScore(Mathf.RoundToInt(Mathf.Abs(transform.position.y - startPos.y)));
     }
 }
