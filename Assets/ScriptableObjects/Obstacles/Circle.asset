@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Circle
   m_EditorClassIdentifier: 
   prefab: {fileID: 7389095144916207039, guid: 4a23ebb669c3b3a4fb262053f2414abb, type: 3}
-  spawnFrequencySec: 1
+  spawnFrequencySec: 0.1
   spawnProbability: 1
-  spawningLanes: 0000000001000000
-  offset: 4
+  spawningLanes: 00000000010000000200000003000000
+  offset: 0

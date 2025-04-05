@@ -66,7 +66,8 @@ namespace ldjam_hellevator
                 var lane = obstacle.spawningLanes[Random.Range(0, obstacle.spawningLanes.Count)];
                 var laneCoordinate = _laneCoordinates[lane];
                 var offset = Random.Range(-obstacle.offset, obstacle.offset);
-                var xCoord = laneCoordinate + offset + _laneWidth / 2f;
+                var center = laneCoordinate + _laneWidth / 2f;
+                var xCoord = Mathf.Clamp(center + offset, laneCoordinate, laneCoordinate + _laneWidth);
                 var yCoord = _gameAreaBottomLeft.y - 10;
                 var spawnPosition = new Vector2(xCoord, yCoord);
                 Instantiate(obstacle.prefab, spawnPosition, Quaternion.identity);
