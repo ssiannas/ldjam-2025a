@@ -20,6 +20,9 @@ namespace ldjam_hellevator
         private int _currentScore = 0;
         public int highScore = 0;
 
+        private float timer;
+        public float scoreTimer = 1.5f;
+
         private void Awake()
         {
 
@@ -36,7 +39,13 @@ namespace ldjam_hellevator
 
         public void LateUpdate()
         {
-            AddPoints(1);
+            timer += Time.deltaTime;
+
+            if (timer >= scoreTimer)
+            {
+                AddPoints(1);
+                timer = 0f;
+            }    
         }
 
 

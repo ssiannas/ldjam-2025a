@@ -235,7 +235,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      miltos_0: 3845030804361857637
+      miltos_1: -2398868186995231749
+      miltos_2: 3106497590772509190
+      miltos_3: -6870319553062153808
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
