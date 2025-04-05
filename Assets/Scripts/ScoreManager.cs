@@ -5,7 +5,6 @@ namespace ldjam_hellevator
 {
     public class ScoreManager : MonoBehaviour
     {
-        public static ScoreManager Instance { get; private set; }
 
         [Header("UI References")] [SerializeField]
         private TMP_Text scoreText;
@@ -14,24 +13,14 @@ namespace ldjam_hellevator
 
         [Header("Settings")] [SerializeField] private string scorePrefix = "Score: ";
         [SerializeField] private string highScorePrefix = "High: ";
-
+        
+        [SerializeField] private ScoreManagerChannel scoreManagerChannel;
+        
         private int _currentScore = 0;
         public int highScore = 0;
 
         private void Awake()
         {
-            // Singleton pattern
-            if (Instance == null)
-            {
-                Instance = this;
-                DontDestroyOnLoad(gameObject); // Optional: persists between scenes
-            }
-            else
-            {
-                Destroy(gameObject);
-                return;
-            }
-
             LoadHighScore();
             UpdateScoreDisplay();
             UpdateHighScoreDisplay();

@@ -22,6 +22,7 @@ namespace ldjam_hellevator
         {
             SceneManager.LoadScene(firstLevel);
         }
+        
         public void QuitGame()
         {
             Application.Quit();

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace ldjam_hellevator
@@ -10,12 +11,23 @@ namespace ldjam_hellevator
         private float moveInput;
         [SerializeField] private float moveSpeed = 5f;
         private Vector3 startPos;
+        
+        [SerializeField]
+        private ScoreManagerChannel scoreManagerChannel;
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
             rb = GetComponent<Rigidbody2D>();
             startPos = transform.position;
+        }
+
+        private void Awake()
+        {
+            if (scoreManagerChannel == null)
+            {
+                throw new Exception("No Score Manager Channel Assigned");
+            }
         }
 
         // Update is called once per frame
@@ -54,7 +66,7 @@ namespace ldjam_hellevator
 
         void IncreaseScore()
         {
-            ScoreManager.Instance.SetScore(Mathf.RoundToInt(Mathf.Abs(transform.position.y - startPos.y)));
+            scoreManagerChannel.SetScore(Mathf.RoundToInt(Mathf.Abs(transform.position.y - startPos.y)));
         }
     }
 }
