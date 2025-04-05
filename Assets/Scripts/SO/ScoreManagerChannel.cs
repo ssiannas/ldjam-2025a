@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,6 +10,7 @@ namespace ldjam_hellevator
         public UnityAction<int> OnAddPoints;
         public UnityAction<int> OnSetScore;
         public UnityAction OnResetScore;
+        public Func<int> OnGetScore;    
 
         public void AddPoints(int points)
         {
@@ -23,6 +25,11 @@ namespace ldjam_hellevator
         public void ResetScore()
         {
             OnResetScore?.Invoke();
+        }
+        
+        public int GetScore()
+        {
+            return OnGetScore.Invoke();
         }
     }
 }

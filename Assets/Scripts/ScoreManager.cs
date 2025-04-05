@@ -32,11 +32,12 @@ namespace ldjam_hellevator
                 throw new System.Exception("No Score Manager Channel Assigned");
             }
             scoreManagerChannel.OnAddPoints += AddPoints;
+            scoreManagerChannel.OnGetScore = GetScore;
             LoadHighScore();
             UpdateScoreDisplay();
             UpdateHighScoreDisplay();
         }
-
+        
         public void LateUpdate()
         {
             timer += Time.deltaTime;
@@ -104,6 +105,11 @@ namespace ldjam_hellevator
         {
             PlayerPrefs.SetInt("HighScore", highScore);
             PlayerPrefs.Save();
+        }
+        
+        private int GetScore()
+        {
+            return _currentScore;
         }
     }
 }

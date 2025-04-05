@@ -466,6 +466,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f2444d5042a8caa44aef46330ed0ec2d, type: 2}
   - {fileID: 11400000, guid: 49505cdf86f04684b896e18cc71bea49, type: 2}
   gameArea: {fileID: 1500870019598046925}
+  scoreManagerChannel: {fileID: 11400000, guid: 3809418ae24f3bd4f9cd7def0c688f9c, type: 2}
 --- !u!1 &2792401187159970454
 GameObject:
   m_ObjectHideFlags: 0

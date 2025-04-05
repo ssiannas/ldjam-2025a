@@ -9,6 +9,7 @@ namespace ldjam_hellevator
         [SerializeField] private List<Obstacle> obstacles = new List<Obstacle>();
 
         [SerializeField] private GameObject gameArea;
+        [SerializeField] private ScoreManagerChannel scoreManagerChannel;
 
         private readonly List<float> _laneCoordinates = new List<float>();
         private float _laneWidth = 0f;
@@ -63,7 +64,10 @@ namespace ldjam_hellevator
                 var xCoord = Mathf.Clamp(center + offset, laneCoordinate, laneCoordinate + _laneWidth);
                 var yCoord = _gameAreaBottomLeft.y - 10;
                 var spawnPosition = new Vector2(xCoord, yCoord);
-                Instantiate(obstacle.prefab, spawnPosition, Quaternion.identity);
+                if (scoreManagerChannel.GetScore() >= obstacle.difficultyThreshold)
+                {
+                    Instantiate(obstacle.prefab, spawnPosition, Quaternion.identity);
+                }
             }
             // repeat the spawn routine
             StartCoroutine(SpawnRoutine(obstacle));

@@ -17,3 +17,4 @@ MonoBehaviour:
   spawnProbability: 1
   spawningLanes: 00000000010000000200000003000000
   offset: 1
+  difficultyThreshold: 0

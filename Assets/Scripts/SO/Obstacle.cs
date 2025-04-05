@@ -13,5 +13,6 @@ namespace ldjam_hellevator
         public float spawnProbability = 1.0f;
         public List<int> spawningLanes = new List<int>(){0, 1, 2, 3};
         public float offset = 0.5f;
+        public float difficultyThreshold = 0f;
     }
 }
