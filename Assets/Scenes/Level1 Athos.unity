@@ -140,7 +140,7 @@ MonoBehaviour:
   heart2: {fileID: 1298133974}
   heart3: {fileID: 1023155429}
   fullHeart: {fileID: -3232125542907459651, guid: b758e193bf359a64b87f7ce1cf323352, type: 3}
-  emptyHeart: {fileID: 4961290715741683230, guid: 98092e032fdf9a4438221d8fa16f17d7, type: 3}
+  emptyHeart: {fileID: -7134224125491679639, guid: 6cfca81f6931ea0499c40b29c597cb69, type: 3}
   uiManagerChannel: {fileID: 11400000, guid: af12d204e6bf77f4f956c3c803f4a43b, type: 2}
 --- !u!114 &1023155429 stripped
 MonoBehaviour:
@@ -255,6 +255,22 @@ PrefabInstance:
     - target: {fileID: 1917228356851580980, guid: 7ca3ecdb576242440bcc9e56a15f228f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358149310637117062, guid: 7ca3ecdb576242440bcc9e56a15f228f, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358149310637117062, guid: 7ca3ecdb576242440bcc9e56a15f228f, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358149310637117062, guid: 7ca3ecdb576242440bcc9e56a15f228f, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1980
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358149310637117062, guid: 7ca3ecdb576242440bcc9e56a15f228f, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 5275061037309639483, guid: 7ca3ecdb576242440bcc9e56a15f228f, type: 3}
       propertyPath: m_Name
