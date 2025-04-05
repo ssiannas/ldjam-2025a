@@ -13,7 +13,6 @@ namespace ldjam_hellevator
         public void AddPoints(int points)
         {
             OnAddPoints?.Invoke(points);
-            Debug.Log("sianna gamiesai");
         }
         
         public void SetScore(int score)

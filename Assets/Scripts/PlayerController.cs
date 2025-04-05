@@ -1,4 +1,5 @@
 using System;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace ldjam_hellevator
@@ -15,11 +16,13 @@ namespace ldjam_hellevator
         [SerializeField] private ScoreManagerChannel scoreManagerChannel;
         [SerializeField] private int pointRate = 1;
 
+        private SpriteRenderer _spriteRenderer;
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
             rb = GetComponent<Rigidbody2D>();
             startPos = transform.position;
+            _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         private void Awake()
@@ -33,27 +36,33 @@ namespace ldjam_hellevator
         // Update is called once per frame
         void Update()
         {
-            //IncreaseGravity();
-            moveInput = GetStreeringInput();
+            moveInput = GetSteeringInput();
+            MaybeFlipSprite(moveInput);
         }
 
-        void FixedUpdate()
+        private void FixedUpdate()
         {
             Steer();
         }
 
-        void IncreaseGravity()
+        private void MaybeFlipSprite(float moveInputHorizontal)
+        {
+            if (_spriteRenderer is null) return;
+            _spriteRenderer.flipX = moveInputHorizontal < 0;
+        }
+
+        private void IncreaseGravity()
         {
             fallSpeed += gravityIncreaseRate * Time.deltaTime;
             rb.linearVelocityY = -1 * fallSpeed;
         }
 
-        float GetStreeringInput()
+        private float GetSteeringInput()
         {
             return Input.GetAxis("Horizontal");
         }
 
-        void Steer()
+        private void Steer()
         {
             Vector2 velocity = rb.linearVelocity;
             velocity.x = moveInput * moveSpeed;
