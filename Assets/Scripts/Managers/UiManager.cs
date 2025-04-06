@@ -43,7 +43,7 @@ namespace ldjam_hellevator
 
         private void Awake()
         {
-            DontDestroyOnLoad(this);
+            //DontDestroyOnLoad(this);
             if (uiManagerChannel == null)
             {
                 throw new System.Exception("No UI Manager Channel Assigned");

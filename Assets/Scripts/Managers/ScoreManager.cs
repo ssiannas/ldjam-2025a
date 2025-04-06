@@ -26,7 +26,7 @@ namespace ldjam_hellevator
         private void Awake()
         {
 
-            DontDestroyOnLoad(this);
+            //DontDestroyOnLoad(this);
             if (scoreManagerChannel == null)
             {
                 throw new System.Exception("No Score Manager Channel Assigned");

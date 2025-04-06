@@ -51,6 +51,7 @@ namespace ldjam_hellevator
 
         public void UploadLeaderBoardEntry(TMP_InputField playerName)
         {
+            //this will work only in main scene, we will probably call it on the game over scene, that has no channel UNLESS
             int score = scoreManagerChannel.GetScore();
             string text = playerName.text.Trim().Normalize();
             leaderBoardChannel.UploadLeaderBoardEntry(text, score, OnLeaderBoardLoaded, OnLBFailed);

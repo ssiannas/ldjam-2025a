@@ -64,6 +64,10 @@ namespace ldjam_hellevator
             {
                 throw new Exception("No UI Manager Channel Assigned");
             }
+            if (gmChannel == null)
+            {
+                throw new Exception("No GM Channel Assigned");
+            }
             _animator = GetComponent<Animator>();
         }
 
@@ -133,14 +137,25 @@ namespace ldjam_hellevator
             
             Debug.Log("Player hit! Lives left: " + currentLives);
             audioChannel.PlayAudio(SoundNames.PlayerDamage);
-
             uiManagerChannel.UpdateHearts(currentLives);
-            gmChannel.BloomPulsate(intensity: 14f, duration: 0.15f);
-            gmChannel.CameraShake();
-            
+
             if (currentLives <= 0)
             {
                 Die();
+                Debug.Log("dead");
+            }
+            else
+            {
+                StartCoroutine(Invulnerability());
+            }
+
+            gmChannel.BloomPulsate(intensity: 14f, duration: 0.15f);
+            gmChannel.CameraShake();
+
+            if (currentLives <= 0)
+            {
+                Die();
+                Debug.Log("dead");
             }
             else
             {
