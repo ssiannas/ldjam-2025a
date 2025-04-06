@@ -119,24 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &632821565 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8133258316963159438, guid: b05ada2ad0e03d94093c5e0f071c9da4, type: 3}
-  m_PrefabInstance: {fileID: 3510158449752926174}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &632821568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632821565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e60ba1d684ad33b45a8354f2235fc21b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gmChannel: {fileID: 11400000, guid: b54cdec42e2948a428c045620cb51713, type: 2}
 --- !u!114 &1029144874 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4988343747469095625, guid: 7ca3ecdb576242440bcc9e56a15f228f, type: 3}
@@ -361,10 +343,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1845603636228176481, guid: b05ada2ad0e03d94093c5e0f071c9da4, type: 3}
-      propertyPath: _gameManagerChannel
-      value: 
-      objectReference: {fileID: 11400000, guid: b54cdec42e2948a428c045620cb51713, type: 2}
     - target: {fileID: 7735129278209752283, guid: b05ada2ad0e03d94093c5e0f071c9da4, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -372,10 +350,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8133258316963159438, guid: b05ada2ad0e03d94093c5e0f071c9da4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 632821568}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b05ada2ad0e03d94093c5e0f071c9da4, type: 3}
 --- !u!1001 &3522326300956137564
 PrefabInstance:
@@ -385,10 +360,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1066992532301693775, guid: d9637a2a251617843a90cdee1f31a1de, type: 3}
-      propertyPath: gmChannel
-      value: 
-      objectReference: {fileID: 11400000, guid: b54cdec42e2948a428c045620cb51713, type: 2}
     - target: {fileID: 1679269400262074194, guid: d9637a2a251617843a90cdee1f31a1de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.24
