@@ -11,6 +11,7 @@ namespace ldjam_hellevator
         public UnityAction OnGamePause;
         public UnityAction OnGameResume;
         public UnityAction OnGameQuit;
+        public UnityAction<float, float, bool> OnBloomPulsate;
        
         public void GameStart()
         {
@@ -55,6 +56,11 @@ namespace ldjam_hellevator
                 throw new System.Exception("No Game Manager Assigned");
             }
             OnGameQuit?.Invoke();
+        }
+
+        public void BloomPulsate(float intensity, float duration, bool loop = false)
+        {
+            OnBloomPulsate?.Invoke(intensity, duration, loop);
         }
     }
 }

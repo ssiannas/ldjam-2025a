@@ -7,7 +7,8 @@ namespace ldjam_hellevator
 {
     public class PlayerController : MonoBehaviour
     {
-        private Rigidbody2D rb;
+        private Rigidbody2D _rigidbody;
+        private Animator _animator;
         [SerializeField] private float fallSpeed = 2f;
         [SerializeField] private float gravityIncreaseRate = 0.1f;
         private float moveInput;
@@ -17,6 +18,8 @@ namespace ldjam_hellevator
         [Header("Channels")]
         [SerializeField] private ScoreManagerChannel scoreManagerChannel;
         [SerializeField] private UiManagerChannel uiManagerChannel;
+        [SerializeField] private GmChannel gmChannel;
+        
         [SerializeField] private int pointRate = 1;
 
         private SpriteRenderer _spriteRenderer;
@@ -32,6 +35,7 @@ namespace ldjam_hellevator
         [SerializeField] private float dashForce = 10f;
         [SerializeField] private float dashDuration = 0.2f;
         
+        private static readonly int IsDashing = Animator.StringToHash("IsDashing");
         private float _lastDashTime = -Mathf.Infinity;
         private bool _isDashing = false;
         private Vector3 _originalPosition;
@@ -40,7 +44,7 @@ namespace ldjam_hellevator
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
-            rb = GetComponent<Rigidbody2D>();
+            _rigidbody = GetComponent<Rigidbody2D>();
             startPos = transform.position;
             _spriteRenderer = GetComponent<SpriteRenderer>();
             currentLives = maxLives;
@@ -57,6 +61,7 @@ namespace ldjam_hellevator
             {
                 throw new Exception("No UI Manager Channel Assigned");
             }
+            _animator = GetComponent<Animator>();
         }
 
         // Update is called once per frame
@@ -83,13 +88,14 @@ namespace ldjam_hellevator
             var yDifference = transform.position.y - _originalPosition.y;
             if (_isDashing || !(Mathf.Abs(yDifference) < 0.2f)) return;
             _isReturning = false;
-            rb.linearVelocityY = 0f;
+            _animator.SetBool(IsDashing, false);
+            _rigidbody.linearVelocityY = 0f;
         }
 
         private void MaybeHandleReturnFixed()
         {
             if (!_isReturning) return;
-            rb.AddForce(Vector2.up * (dashForce * 5), ForceMode2D.Force);
+            _rigidbody.AddForce(Vector2.up * (dashForce * 5), ForceMode2D.Force);
  
         }
 
@@ -102,7 +108,7 @@ namespace ldjam_hellevator
         private void IncreaseGravity()
         {
             fallSpeed += gravityIncreaseRate * Time.deltaTime;
-            rb.linearVelocityY = -1 * fallSpeed;
+            _rigidbody.linearVelocityY = -1 * fallSpeed;
         }
 
         private float GetSteeringInput()
@@ -112,19 +118,20 @@ namespace ldjam_hellevator
 
         private void Steer()
         {
-            var velocity = rb.linearVelocity;
+            var velocity = _rigidbody.linearVelocity;
             velocity.x = moveInput * moveSpeed;
-            rb.linearVelocityX = velocity.x;
+            _rigidbody.linearVelocityX = velocity.x;
         }
 
         public void TakeDamage()
         {
             if (isInvulnerable) return;
             currentLives--;
+            
             Debug.Log("Player hit! Lives left: " + currentLives);
 
             uiManagerChannel.UpdateHearts(currentLives);
-
+            gmChannel.BloomPulsate(intensity: 10f, duration: 0.3f);
             if (currentLives <= 0)
             {
                 Die();
@@ -139,8 +146,10 @@ namespace ldjam_hellevator
         {
             _lastDashTime = Time.time;
             _isDashing = true;
-            rb.AddForce(Vector2.down * dashForce,  ForceMode2D.Impulse);
+            _rigidbody.AddForce(Vector2.down * dashForce,  ForceMode2D.Impulse);
+            uiManagerChannel.DashCooldown(dashCdSec);
             StartCoroutine(Invulnerability(duration: dashDuration*2, shouldFlash: false));
+            _animator.SetBool(IsDashing, true);
             yield return new WaitForSeconds(dashDuration);
             _isReturning = true;
             _isDashing = false;

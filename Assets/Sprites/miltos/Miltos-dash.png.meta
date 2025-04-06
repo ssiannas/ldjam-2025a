@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 79d46358bcd807d4ca4d86aaaa7caedf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5608542003766481716
+    second: Miltos-dash_0
+  - first:
+      213: -1374610802230638865
+    second: Miltos-dash_1
+  - first:
+      213: 1870414781604904789
+    second: Miltos-dash_2
+  - first:
+      213: -4757207925671359900
+    second: Miltos-dash_3
+  - first:
+      213: 807140486594927200
+    second: Miltos-dash_4
+  - first:
+      213: 2483001500968037121
+    second: Miltos-dash_5
+  - first:
+      213: -3811990108680861556
+    second: Miltos-dash_6
+  - first:
+      213: 5052666397748773081
+    second: Miltos-dash_7
+  - first:
+      213: 6888995611724218728
+    second: Miltos-dash_8
+  - first:
+      213: 8363713493400177291
+    second: Miltos-dash_9
+  - first:
+      213: 1145923938835435702
+    second: Miltos-dash_10
+  - first:
+      213: -6725785761198125572
+    second: Miltos-dash_11
+  - first:
+      213: 4818462282353653554
+    second: Miltos-dash_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 40
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Miltos-dash_0
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 255
+        width: 490
+        height: 466
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccc24ad43c47a22b0800000000000000
+      internalID: -5608542003766481716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miltos-dash_1
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 199
+        width: 394
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe6c0a422c66cece0800000000000000
+      internalID: -1374610802230638865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miltos-dash_2
+      rect:
+        serializedVersion: 2
+        x: 2479
+        y: 231
+        width: 346
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55f3330855c05f910800000000000000
+      internalID: 1870414781604904789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miltos-dash_3
+      rect:
+        serializedVersion: 2
+        x: 3539
+        y: 211
+        width: 306
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46a8faba8900bfdb0800000000000000
+      internalID: -4757207925671359900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miltos-dash_4
+      rect:
+        serializedVersion: 2
+        x: 4539
+        y: 219
+        width: 346
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06a93530ff9833b00800000000000000
+      internalID: 807140486594927200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miltos-dash_5
+      rect:
+        serializedVersion: 2
+        x: 5567
+        y: 203
+        width: 306
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10b26f9a5b4657220800000000000000
+      internalID: 2483001500968037121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miltos-dash_6
+      rect:
+        serializedVersion: 2
+        x: 6571
+        y: 239
+        width: 346
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8846c46137191bc0800000000000000
+      internalID: -3811990108680861556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miltos-dash_7
+      rect:
+        serializedVersion: 2
+        x: 7587
+        y: 239
+        width: 306
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d04e5e815dae1640800000000000000
+      internalID: 5052666397748773081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miltos-dash_8
+      rect:
+        serializedVersion: 2
+        x: 8607
+        y: 287
+        width: 346
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8610c086201aa9f50800000000000000
+      internalID: 6888995611724218728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miltos-dash_9
+      rect:
+        serializedVersion: 2
+        x: 9675
+        y: 255
+        width: 306
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a42410c11e11470800000000000000
+      internalID: 8363713493400177291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miltos-dash_10
+      rect:
+        serializedVersion: 2
+        x: 10663
+        y: 251
+        width: 346
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b017e140c327ef00800000000000000
+      internalID: 1145923938835435702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miltos-dash_11
+      rect:
+        serializedVersion: 2
+        x: 11667
+        y: 199
+        width: 394
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfdc7642c7539a2a0800000000000000
+      internalID: -6725785761198125572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Miltos-dash_12
+      rect:
+        serializedVersion: 2
+        x: 12675
+        y: 255
+        width: 490
+        height: 466
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 237be4f9aed9ed240800000000000000
+      internalID: 4818462282353653554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Miltos-dash_0: -5608542003766481716
+      Miltos-dash_1: -1374610802230638865
+      Miltos-dash_10: 1145923938835435702
+      Miltos-dash_11: -6725785761198125572
+      Miltos-dash_12: 4818462282353653554
+      Miltos-dash_2: 1870414781604904789
+      Miltos-dash_3: -4757207925671359900
+      Miltos-dash_4: 807140486594927200
+      Miltos-dash_5: 2483001500968037121
+      Miltos-dash_6: -3811990108680861556
+      Miltos-dash_7: 5052666397748773081
+      Miltos-dash_8: 6888995611724218728
+      Miltos-dash_9: 8363713493400177291
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
