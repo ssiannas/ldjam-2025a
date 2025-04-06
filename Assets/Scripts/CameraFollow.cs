@@ -12,7 +12,7 @@ namespace ldjam_hellevator
         
         [Header("Camera Shake")]
         private Vector3 _originalPos;
-        private float _shakeIntensity = 0.05f;
+        private float _shakeIntensity = 0.15f;
         private float _shakeDuration = 0.3f;
         private float _smoothness = 3f;
         

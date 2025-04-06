@@ -152,7 +152,7 @@ namespace ldjam_hellevator
             _isDashing = true;
             _rigidbody.AddForce(Vector2.down * dashForce,  ForceMode2D.Impulse);
             uiManagerChannel.DashCooldown(dashCdSec);
-            StartCoroutine(Invulnerability(duration: dashDuration*2, shouldFlash: false));
+            StartCoroutine(Invulnerability(duration: dashDuration*4, shouldFlash: false));
             _animator.SetBool(IsDashing, true);
             yield return new WaitForSeconds(dashDuration);
             _isReturning = true;

@@ -48,11 +48,11 @@ MonoBehaviour:
   - source: {fileID: 0}
     clip: {fileID: 8300000, guid: 97cbbc509a68d404e8581db2c0fc6fc9, type: 3}
     soundName: main_theme
-    volume: 1
+    volume: 0.61
     pitch: 1
     loop: 1
   - source: {fileID: 0}
-    clip: {fileID: 8300000, guid: 0566a2f86e7a6a44b93ec9ec308b61dd, type: 3}
+    clip: {fileID: 8300000, guid: fea35b84e6bc3a0409f936387f3b8185, type: 3}
     soundName: opening_theme
     volume: 1
     pitch: 1
