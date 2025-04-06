@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Miltos-dash empty_0: 4898127063019489352
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -93,7 +93,7 @@ namespace ldjam_hellevator
         private void UpdateHighScoreDisplay()
         {
             if (highScoreText is not null)
-                highScoreText.text = $"High Score: {highScore}";
+                highScoreText.text = $"Max Depth: {highScore}";
         }
 
         private void LoadHighScore()
