@@ -130,6 +130,7 @@ MonoBehaviour:
   moveSpeed: 5
   scoreManagerChannel: {fileID: 11400000, guid: 3809418ae24f3bd4f9cd7def0c688f9c, type: 2}
   uiManagerChannel: {fileID: 11400000, guid: af12d204e6bf77f4f956c3c803f4a43b, type: 2}
+  gmChannel: {fileID: 11400000, guid: b54cdec42e2948a428c045620cb51713, type: 2}
   pointRate: 1
   maxLives: 3
   invulnerabilityDuration: 2
