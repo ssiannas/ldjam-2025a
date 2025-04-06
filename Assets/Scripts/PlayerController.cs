@@ -140,7 +140,7 @@ namespace ldjam_hellevator
             _lastDashTime = Time.time;
             _isDashing = true;
             rb.AddForce(Vector2.down * dashForce,  ForceMode2D.Impulse);
-            StartCoroutine(Invulnerability(shouldFlash: false));
+            StartCoroutine(Invulnerability(duration: dashDuration*2, shouldFlash: false));
             yield return new WaitForSeconds(dashDuration);
             _isReturning = true;
             _isDashing = false;
@@ -152,13 +152,13 @@ namespace ldjam_hellevator
             gameObject.SetActive(false);
         }
 
-        private System.Collections.IEnumerator Invulnerability(bool shouldFlash = true)
+        private System.Collections.IEnumerator Invulnerability(float duration = 2f, bool shouldFlash = true)
         {
             isInvulnerable = true;
 
             // Optional: Flash effect
             float flashDelay = 0.2f;
-            for (float i = 0; i < invulnerabilityDuration; i += flashDelay)
+            for (float i = 0; i < duration; i += flashDelay)
             {
                 if (_spriteRenderer is not null && shouldFlash)
                     _spriteRenderer.enabled = !_spriteRenderer.enabled;
