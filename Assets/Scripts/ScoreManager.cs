@@ -12,7 +12,7 @@ namespace ldjam_hellevator
         [SerializeField] private TMP_Text highScoreText;
 
         [Header("Settings")] 
-        [SerializeField] private string scorePrefix = "Score: ";
+        [SerializeField] private string scorePrefix = "Depth: ";
         [SerializeField] private string highScorePrefix = "High: ";
         
         [SerializeField] private ScoreManagerChannel scoreManagerChannel;
@@ -86,13 +86,13 @@ namespace ldjam_hellevator
 
         private void UpdateScoreDisplay()
         {
-            if (scoreText != null)
-                scoreText.text = $"Score: {_currentScore}";
+            if (scoreText is not null)
+                scoreText.text = $"Depth: {_currentScore}";
         }
 
         private void UpdateHighScoreDisplay()
         {
-            if (highScoreText != null)
+            if (highScoreText is not null)
                 highScoreText.text = $"High Score: {highScore}";
         }
 
