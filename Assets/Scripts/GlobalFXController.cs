@@ -16,7 +16,10 @@ namespace ldjam_hellevator
         [Header("Bloom Properties")]
         private float originalIntensity;
         private float bloomIntensity;
-
+        
+        private bool isBursting = false;
+        private bool isBloomActive = false;
+        IEnumerator loopCoroutine;
 
         private void Awake()
         {
@@ -27,6 +30,7 @@ namespace ldjam_hellevator
             }
             _volume.profile.TryGet<Bloom>(out _bloom);
             gmChannel.OnBloomPulsate += BloomPulsate;
+            originalIntensity = _bloom.intensity.value;
         }
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -38,12 +42,14 @@ namespace ldjam_hellevator
         // Update is called once per frame
         void Update()
         {
-            
+            Debug.Log(_bloom.intensity.value);
 
         }
         
         private IEnumerator ApplyIntensityEffect(float targetIntensity, float duration, bool loop = false)
         {
+            isBloomActive = true;
+            
             var elapsedTime = 0f;
             var halfway = duration / 2f;
 
@@ -66,15 +72,44 @@ namespace ldjam_hellevator
             }
 
             _bloom.intensity.value = originalIntensity;
-            if (loop)
+            StartCoroutine(loopCoroutine);
+        }
+        
+        void BloomPulsateBurst(float intensity, float duration)
+        {
+            if (loopCoroutine != null)
             {
-               StartCoroutine(ApplyIntensityEffect(targetIntensity, duration, true));
+                StopCoroutine(loopCoroutine);
+                isBloomActive = false;
+            }
+            
+            StartCoroutine(ApplyIntensityEffect(intensity, duration, false));
+        }
+        
+        void BloomPulsateLooping(float intensity, float duration)
+        {
+            if (loopCoroutine != null)
+            {
+                StopCoroutine(loopCoroutine);
+                isBloomActive = false;
+            }
+            var coroutine = ApplyIntensityEffect(intensity, duration, true);
+            loopCoroutine = coroutine;
+            StartCoroutine(coroutine);
+        }
+    
+        void BloomPulsate(float intensity, float duration, bool isPeriodic = false)
+        {
+            if (isPeriodic)
+            {
+                BloomPulsateLooping(intensity, duration);
+            }
+            else
+            {
+                BloomPulsateBurst(intensity, duration);
             }
         }
 
-        void BloomPulsate(float intensity, float duration, bool isPeriodic = false)
-        {
-            StartCoroutine(ApplyIntensityEffect(intensity, duration, isPeriodic));
-        }
+
     }
 }
