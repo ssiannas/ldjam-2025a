@@ -1,29 +1,32 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+namespace ldjam_hellevator
 {
-    public GameObject tutorialPanel;
-
-    public void PlayGame()
+    public class MainMenu : MonoBehaviour
     {
-        Debug.Log("Starting Game...");
-        SceneManager.LoadScene("MainLevel");
-    }
+        public GameObject tutorialPanel;
 
-    public void ShowTutorial()
-    {
-        SceneManager.LoadScene("Tutorial");
-    }
+        public void PlayGame()
+        {
+            Debug.Log("Starting Game...");
+            SceneManager.LoadScene("MainLevel");
+        }
 
-    public void GoToMainMenu()
-    {
-        SceneManager.LoadScene("Menu");
-    }
+        public void ShowTutorial()
+        {
+            SceneManager.LoadScene("Tutorial");
+        }
 
-    public void QuitGame()
-    {
-        Debug.Log("Quitting game...");
-        Application.Quit();
+        public void GoToMainMenu()
+        {
+            SceneManager.LoadScene("Menu");
+        }
+
+        public void QuitGame()
+        {
+            Debug.Log("Quitting game...");
+            Application.Quit();
+        }
     }
 }
