@@ -117,7 +117,6 @@ namespace ldjam_hellevator
             rb.linearVelocityX = velocity.x;
         }
 
-
         public void TakeDamage()
         {
             if (isInvulnerable) return;
@@ -154,7 +153,6 @@ namespace ldjam_hellevator
         }
 
         private System.Collections.IEnumerator Invulnerability(bool shouldFlash = true)
-        
         {
             isInvulnerable = true;
 

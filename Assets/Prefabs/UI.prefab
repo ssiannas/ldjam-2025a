@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 2761262781766340556}
   - component: {fileID: 6770836469465925456}
   m_Layer: 5
-  m_Name: Heart Container
+  m_Name: Heart 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -359,6 +359,7 @@ GameObject:
   - component: {fileID: 2225969680351881425}
   - component: {fileID: 3358149310637117062}
   - component: {fileID: 4952142595166280789}
+  - component: {fileID: 715235861084742839}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -425,11 +426,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1980, y: 1080}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -453,6 +454,24 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &715235861084742839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6238180767367132497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf3f6c8d0a59d294b9baae004183758d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heart1: {fileID: 396626081429743473}
+  heart2: {fileID: 2433163853576017356}
+  heart3: {fileID: 6770836469465925456}
+  fullHeart: {fileID: -3232125542907459651, guid: b758e193bf359a64b87f7ce1cf323352, type: 3}
+  emptyHeart: {fileID: -7134224125491679639, guid: 6cfca81f6931ea0499c40b29c597cb69, type: 3}
+  uiManagerChannel: {fileID: 11400000, guid: af12d204e6bf77f4f956c3c803f4a43b, type: 2}
 --- !u!1 &7741786574466872722
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,7 +484,7 @@ GameObject:
   - component: {fileID: 6845871995500610264}
   - component: {fileID: 2433163853576017356}
   m_Layer: 5
-  m_Name: Heart Container (1)
+  m_Name: Heart 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -540,7 +559,7 @@ GameObject:
   - component: {fileID: 6333743417514145820}
   - component: {fileID: 396626081429743473}
   m_Layer: 5
-  m_Name: Heart Container (2)
+  m_Name: Heart 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
