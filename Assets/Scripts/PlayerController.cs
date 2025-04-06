@@ -20,6 +20,7 @@ namespace ldjam_hellevator
         [SerializeField] private ScoreManagerChannel scoreManagerChannel;
         [SerializeField] private UiManagerChannel uiManagerChannel;
         [SerializeField] private GmChannel gmChannel;
+        [SerializeField] private AudioChannel audioChannel;
         
         [SerializeField] private int pointRate = 1;
 
@@ -131,6 +132,7 @@ namespace ldjam_hellevator
             currentLives--;
             
             Debug.Log("Player hit! Lives left: " + currentLives);
+            audioChannel.PlayAudio(SoundNames.PlayerDamage);
 
             uiManagerChannel.UpdateHearts(currentLives);
             gmChannel.BloomPulsate(intensity: 14f, duration: 0.15f);

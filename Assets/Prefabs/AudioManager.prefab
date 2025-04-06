@@ -57,4 +57,10 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
+  - source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 34d70bac637319d42b34bd311ee7b697, type: 3}
+    soundName: player_damage
+    volume: 0.589
+    pitch: 1.3
+    loop: 0
   channel: {fileID: 11400000, guid: 39761e71ad1ac144b8f67e80d47a364c, type: 2}
