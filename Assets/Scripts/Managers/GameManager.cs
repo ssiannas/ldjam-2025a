@@ -5,8 +5,14 @@ namespace ldjam_hellevator
 {
     public class GameManager : MonoBehaviour
     {
-        [SerializeField] private GmChannel gmChannel;
+        
         private readonly string firstLevel = "Level1";
+        [Header("Channels")]
+        [SerializeField] private GmChannel gmChannel;
+        [SerializeField] private AudioChannel audioChannel;
+        
+        [Header("Debug")]
+        [SerializeField] private bool playMusicOnLoad = false;
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Awake()
         {
@@ -14,6 +20,11 @@ namespace ldjam_hellevator
             if (gmChannel == null)
             {
                 throw new System.Exception("No Game Manager Channel Assigned");
+            }
+
+            if (playMusicOnLoad)
+            {
+                audioChannel.PlayAudio(SoundNames.MainTheme);
             }
             gmChannel.OnGameStart += StartGame;
         }

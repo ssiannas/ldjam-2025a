@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gmChannel: {fileID: 11400000, guid: b54cdec42e2948a428c045620cb51713, type: 2}
+  audioChannel: {fileID: 11400000, guid: 39761e71ad1ac144b8f67e80d47a364c, type: 2}
+  playMusicOnLoad: 0
 --- !u!114 &5654592830167115107
 MonoBehaviour:
   m_ObjectHideFlags: 0

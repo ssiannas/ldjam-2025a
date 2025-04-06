@@ -13,6 +13,7 @@ namespace ldjam_hellevator
         public UnityAction OnGameQuit;
         public UnityAction<float, float, bool> OnBloomPulsate;
         public UnityAction OnCameraShake;
+
        
         public void GameStart()
         {
