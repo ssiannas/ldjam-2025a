@@ -7,8 +7,20 @@ namespace ldjam_hellevator
     {
         public List<Sound> sounds;
         [SerializeField] private AudioChannel channel;
+
+        private static AudioManager _instance;
         private void Awake()
         {
+            if (_instance == null)
+            {
+                _instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+            
             channel.OnAudioRequested += Play;
             channel.OnAudioStopped += Stop;
             channel.OnIsAudioPlaying = IsPlaying;
