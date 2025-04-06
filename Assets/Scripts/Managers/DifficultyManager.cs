@@ -37,8 +37,11 @@ namespace ldjam_hellevator
         {
             foreach (var obstacle in obstacles)
             {
-                obstacle.SpawnFrequencySec -= (level * 0.05f);
-                obstacle.SpawnProbability += (level * 0.005f);
+                if (scoreManagerChannel.GetScore() >= obstacle.difficultyThreshold)
+                {
+                    obstacle.SpawnFrequencySec -= (level * 0.05f);
+                    obstacle.SpawnProbability += (level * 0.005f);
+                }
             }
             
             var newSpeed = wallData.currentWallSpeed + wallData.wallSpeedIncreaseRate;

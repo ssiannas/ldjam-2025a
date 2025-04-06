@@ -17,4 +17,6 @@ MonoBehaviour:
   spawnProbabilityDefault: 0.63
   spawningLanes: 00000000010000000200000003000000
   offset: 0
-  difficultyThreshold: 7
+  difficultyThreshold: 10
+  spawnFrequencySec: 4
+  spawnProbability: 0.63

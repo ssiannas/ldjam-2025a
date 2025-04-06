@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Fireball
   m_EditorClassIdentifier: 
   prefab: {fileID: 7389095144916207039, guid: 4a23ebb669c3b3a4fb262053f2414abb, type: 3}
-  spawnFrequencySec: 0.5
-  spawnProbability: 1
+  spawnFrequencySecDefault: 0.75
+  spawnProbabilityDefault: 0.85
   spawningLanes: 00000000010000000200000003000000
   offset: 1
   difficultyThreshold: 0
+  spawnFrequencySec: 0.25
+  spawnProbability: 0.92499995
