@@ -120,8 +120,7 @@ namespace ldjam_hellevator
 
         public void TakeDamage()
         {
-            //if (isInvulnerable) return;
-
+            if (isInvulnerable) return;
             currentLives--;
             Debug.Log("Player hit! Lives left: " + currentLives);
 
