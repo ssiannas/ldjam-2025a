@@ -26,6 +26,7 @@ namespace ldjam_hellevator
         
         private Vector2 _moveDirection = Vector2.up; 
         private Rigidbody2D _rigidbody;
+        private SpriteRenderer _spriteRenderer;
         private Animator _animator;
         // Maybe add random offset here in awake
         private readonly float _minDistanceFromTarget = 7f;
@@ -36,12 +37,21 @@ namespace ldjam_hellevator
              target = GameObject.FindGameObjectWithTag("Player").transform; 
              _rigidbody = GetComponent<Rigidbody2D>();
              _animator = GetComponent<Animator>();
+             _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         // Update is called once per frame
         void Update()
         {
             CheckState();
+            MaybeFlipSprite();
+        }
+
+        void MaybeFlipSprite()
+        {
+            var direction = (target.position - transform.position).normalized;
+            if (_spriteRenderer is null) return;
+            _spriteRenderer.flipX = direction.x < 0;
         }
 
         void CheckState()
