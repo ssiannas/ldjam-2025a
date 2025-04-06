@@ -6,6 +6,12 @@ namespace ldjam_hellevator
     public class MainMenu : MonoBehaviour
     {
         public GameObject tutorialPanel;
+        [SerializeField] private AudioChannel audioChannel;
+
+        void Awake()
+        {
+            audioChannel.PlayAudio(SoundNames.MainTheme);
+        }
 
         public void PlayGame()
         {
