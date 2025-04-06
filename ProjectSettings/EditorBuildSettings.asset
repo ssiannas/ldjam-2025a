@@ -15,6 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 766bf9468498e454480ff9ce3ca832ff
   - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: cf82ff49b8583b34aa1691092260ab53
+  - enabled: 1
+    path: Assets/Scenes/MainLevel.unity
+    guid: 9a0b527bf290f0a4690ade363993e8b4
+  - enabled: 1
     path: Assets/Scenes/Level1 Athos.unity
     guid: 895a4d4c3ac3fb943a3d74bf77ff2af4
   m_configObjects:

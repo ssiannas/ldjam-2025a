@@ -277,7 +277,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -763, y: -430}
+  m_AnchoredPosition: {x: -715, y: -392.99997}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &233617132
@@ -352,7 +352,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -433.03, y: 152}
+  m_AnchoredPosition: {x: -380, y: 133}
   m_SizeDelta: {x: 961.0577, y: 620.1114}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &277128176
@@ -377,10 +377,17 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Welcome to Dave the HellDiver!
 
+
     Those pesky prudes in Heaven cast
-    you out, but you''ll show them, if they dont want you then you will reach the
-    DEPTHS OF HELL! Be carefull though there are many dangers and evil creatures
-    that will cause you harm...
+    you out, but you''ll show them!
+
+    If they dont want you then you will reach
+    the DEPTHS OF HELL!
+
+
+    Be carefull though there are many dangers and evil
+    creatures that will cause you harm...
+
 
     How deep can you Descend?'
   m_isRightToLeft: 0
@@ -409,8 +416,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -804,7 +811,7 @@ GameObject:
   - component: {fileID: 422250884}
   - component: {fileID: 422250883}
   m_Layer: 5
-  m_Name: LoreDump (1)
+  m_Name: Guide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -826,7 +833,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 457.61, y: 199.35}
+  m_AnchoredPosition: {x: 510.03003, y: 230.52005}
   m_SizeDelta: {x: 320.776, y: 194.7189}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &422250883
@@ -849,7 +856,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use the Arrow Keys or A/D to steer
+  m_text: Use the Arrow Keys or A/D to steer and avoid enemies and hazards
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b3915bb6c08b8b040aef884b6af3f600, type: 2}
   m_sharedMaterial: {fileID: -5619106932048249319, guid: b3915bb6c08b8b040aef884b6af3f600, type: 2}
@@ -940,7 +947,7 @@ GameObject:
   - component: {fileID: 437314946}
   - component: {fileID: 437314945}
   m_Layer: 5
-  m_Name: LoreDump (2)
+  m_Name: Guide Cont.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -962,8 +969,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 508, y: -0.0050259}
-  m_SizeDelta: {x: 320.776, y: 194.7189}
+  m_AnchoredPosition: {x: 510.03177, y: -33.45798}
+  m_SizeDelta: {x: 610.2186, y: 76.3106}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &437314945
 MonoBehaviour:
@@ -985,7 +992,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use the Spaces to dodge roll
+  m_text: Use the Space to dodge roll
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b3915bb6c08b8b040aef884b6af3f600, type: 2}
   m_sharedMaterial: {fileID: -5619106932048249319, guid: b3915bb6c08b8b040aef884b6af3f600, type: 2}
@@ -1098,7 +1105,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -322, y: -257}
+  m_AnchoredPosition: {x: -251.99994, y: -278.99997}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &524521325
@@ -1763,6 +1770,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1411697738}
+  - {fileID: 1396275193}
   - {fileID: 560594907}
   - {fileID: 1822689809}
   - {fileID: 388270866}
@@ -1782,6 +1790,81 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1396275192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1396275193}
+  - component: {fileID: 1396275195}
+  - component: {fileID: 1396275194}
+  m_Layer: 5
+  m_Name: Buffer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1396275193
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396275192}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1150729516}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1396275194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396275192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.1509434, g: 0.006407972, b: 0.006407972, a: 0.84313726}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1396275195
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396275192}
+  m_CullTransparentMesh: 1
 --- !u!1 &1411697737
 GameObject:
   m_ObjectHideFlags: 0
@@ -2027,7 +2110,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -829, y: -556.88}
+  m_AnchoredPosition: {x: -485.15, y: -693}
   m_SizeDelta: {x: 196.4809, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1651682119
@@ -2102,7 +2185,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -763, y: -272}
+  m_AnchoredPosition: {x: -704, y: -279}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1755064135
@@ -2372,7 +2455,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -579, y: -123}
+  m_AnchoredPosition: {x: -490.99997, y: -129.99997}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1914918457
@@ -2447,7 +2530,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -298, y: -404.88}
+  m_AnchoredPosition: {x: -251.99994, y: -393}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2053900586
