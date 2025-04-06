@@ -42,8 +42,6 @@ namespace ldjam_hellevator
         // Update is called once per frame
         void Update()
         {
-            Debug.Log(_bloom.intensity.value);
-
         }
         
         private IEnumerator ApplyIntensityEffect(float targetIntensity, float duration, bool loop = false)

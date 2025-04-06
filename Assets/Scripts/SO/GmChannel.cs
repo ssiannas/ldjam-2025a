@@ -12,6 +12,7 @@ namespace ldjam_hellevator
         public UnityAction OnGameResume;
         public UnityAction OnGameQuit;
         public UnityAction<float, float, bool> OnBloomPulsate;
+        public UnityAction OnCameraShake;
        
         public void GameStart()
         {
@@ -58,6 +59,11 @@ namespace ldjam_hellevator
             OnGameQuit?.Invoke();
         }
 
+        public void CameraShake()
+        {
+            OnCameraShake?.Invoke();
+        }
+        
         public void BloomPulsate(float intensity, float duration, bool loop = false)
         {
             OnBloomPulsate?.Invoke(intensity, duration, loop);

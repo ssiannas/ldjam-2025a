@@ -133,6 +133,8 @@ namespace ldjam_hellevator
 
             uiManagerChannel.UpdateHearts(currentLives);
             gmChannel.BloomPulsate(intensity: 14f, duration: 0.15f);
+            gmChannel.CameraShake();
+            
             if (currentLives <= 0)
             {
                 Die();
