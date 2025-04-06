@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 
 namespace ldjam_hellevator
 {
-    [CreateAssetMenu(fileName = "LeaderBoardChannel", menuName = "ScriptableObjects/LeaderBoardChannel", order = 1)]
+    [CreateAssetMenu(fileName = "LeaderBoardChannel", menuName = "Scriptable Objects/LeaderBoardChannel", order = 1)]
     public class LeaderBoardChannel : ScriptableObject
     {
         private string lbPubKey = "57cb01de3a1b37958cb52f6719a8c65375b8297dc0e9edede312e5b43c1d91bb";
