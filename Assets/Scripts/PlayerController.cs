@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace ldjam_hellevator
 {
@@ -160,8 +161,8 @@ namespace ldjam_hellevator
 
         private void Die()
         {
-            Debug.Log("Player died!");
             gameObject.SetActive(false);
+            SceneManager.LoadScene("GameOver");
         }
 
         private System.Collections.IEnumerator Invulnerability(float duration = 2f, bool shouldFlash = true)
