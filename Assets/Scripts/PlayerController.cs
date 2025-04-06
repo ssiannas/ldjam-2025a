@@ -139,15 +139,6 @@ namespace ldjam_hellevator
             audioChannel.PlayAudio(SoundNames.PlayerDamage);
             uiManagerChannel.UpdateHearts(currentLives);
 
-            if (currentLives <= 0)
-            {
-                Die();
-                Debug.Log("dead");
-            }
-            else
-            {
-                StartCoroutine(Invulnerability());
-            }
 
             gmChannel.BloomPulsate(intensity: 14f, duration: 0.15f);
             gmChannel.CameraShake();

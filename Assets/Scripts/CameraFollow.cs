@@ -20,6 +20,7 @@ namespace ldjam_hellevator
 
         private void Start()
         {
+            DontDestroyOnLoad(this);
             _originalPos = transform.localPosition;
             _gameManagerChannel.OnCameraShake += DoShake;
         }   
