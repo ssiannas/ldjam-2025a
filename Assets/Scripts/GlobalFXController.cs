@@ -51,7 +51,7 @@ namespace ldjam_hellevator
             {
                 var t = elapsedTime / halfway; 
                 var intensity = Mathf.Lerp(originalIntensity, targetIntensity, t);  
-                _bloom.intensity = new MinFloatParameter(intensity, 0); 
+                _bloom.intensity.value = intensity; 
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
@@ -60,12 +60,12 @@ namespace ldjam_hellevator
             {
                 var t = (elapsedTime - halfway) / halfway; 
                 var intensity = Mathf.Lerp(targetIntensity, originalIntensity, t);  
-                _bloom.intensity = new MinFloatParameter(intensity, 0);  
+                _bloom.intensity.value = intensity;
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
 
-            _bloom.intensity = new MinFloatParameter(originalIntensity, 0);  
+            _bloom.intensity.value = originalIntensity;
             if (loop)
             {
                StartCoroutine(ApplyIntensityEffect(targetIntensity, duration, true));

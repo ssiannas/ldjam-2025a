@@ -49,6 +49,7 @@ namespace ldjam_hellevator
             _spriteRenderer = GetComponent<SpriteRenderer>();
             currentLives = maxLives;
             _originalPosition = transform.position;
+            gmChannel.BloomPulsate(4f, 4f, true);
         }
 
         private void Awake()
@@ -131,7 +132,7 @@ namespace ldjam_hellevator
             Debug.Log("Player hit! Lives left: " + currentLives);
 
             uiManagerChannel.UpdateHearts(currentLives);
-            gmChannel.BloomPulsate(intensity: 10f, duration: 0.3f);
+            gmChannel.BloomPulsate(intensity: 14f, duration: 0.15f);
             if (currentLives <= 0)
             {
                 Die();
