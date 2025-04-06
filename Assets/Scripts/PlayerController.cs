@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace ldjam_hellevator
@@ -25,6 +27,15 @@ namespace ldjam_hellevator
         private bool isInvulnerable = false;
         [SerializeField] private float invulnerabilityDuration = 2f;
 
+        [Header("Abilities")] 
+        [SerializeField] private float dashCdSec = 3f;
+        [SerializeField] private float dashForce = 10f;
+        [SerializeField] private float dashDuration = 0.2f;
+        
+        private float _lastDashTime = -Mathf.Infinity;
+        private bool _isDashing = false;
+        private Vector3 _originalPosition;
+        private bool _isReturning = false;
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
@@ -33,6 +44,7 @@ namespace ldjam_hellevator
             startPos = transform.position;
             _spriteRenderer = GetComponent<SpriteRenderer>();
             currentLives = maxLives;
+            _originalPosition = transform.position;
         }
 
         private void Awake()
@@ -50,13 +62,35 @@ namespace ldjam_hellevator
         // Update is called once per frame
         void Update()
         {
+            if (Input.GetKeyDown(KeyCode.Space) && !_isDashing && Time.time - _lastDashTime > dashCdSec)
+            {
+                StartCoroutine(Dash());
+            }
             moveInput = GetSteeringInput();
             MaybeFlipSprite(moveInput);
+            MaybeHandleReturn();
         }
 
         private void FixedUpdate()
         {
             Steer();
+            MaybeHandleReturnFixed();
+        }
+
+        private void MaybeHandleReturn()
+        {
+            if (!_isReturning) return;
+            var yDifference = transform.position.y - _originalPosition.y;
+            if (_isDashing || !(Mathf.Abs(yDifference) < 0.2f)) return;
+            _isReturning = false;
+            rb.linearVelocityY = 0f;
+        }
+
+        private void MaybeHandleReturnFixed()
+        {
+            if (!_isReturning) return;
+            rb.AddForce(Vector2.up * (dashForce * 5), ForceMode2D.Force);
+ 
         }
 
         private void MaybeFlipSprite(float moveInputHorizontal)
@@ -78,7 +112,7 @@ namespace ldjam_hellevator
 
         private void Steer()
         {
-            Vector2 velocity = rb.linearVelocity;
+            var velocity = rb.linearVelocity;
             velocity.x = moveInput * moveSpeed;
             rb.linearVelocityX = velocity.x;
         }
@@ -102,6 +136,17 @@ namespace ldjam_hellevator
                 StartCoroutine(Invulnerability());
             }
         }
+        
+        private IEnumerator Dash()
+        {
+            _lastDashTime = Time.time;
+            _isDashing = true;
+            rb.AddForce(Vector2.down * dashForce,  ForceMode2D.Impulse);
+            StartCoroutine(Invulnerability(shouldFlash: false));
+            yield return new WaitForSeconds(dashDuration);
+            _isReturning = true;
+            _isDashing = false;
+        }
 
         private void Die()
         {
@@ -109,7 +154,8 @@ namespace ldjam_hellevator
             gameObject.SetActive(false);
         }
 
-        private System.Collections.IEnumerator Invulnerability()
+        private System.Collections.IEnumerator Invulnerability(bool shouldFlash = true)
+        
         {
             isInvulnerable = true;
 
@@ -117,12 +163,12 @@ namespace ldjam_hellevator
             float flashDelay = 0.2f;
             for (float i = 0; i < invulnerabilityDuration; i += flashDelay)
             {
-                if (_spriteRenderer is not null)
+                if (_spriteRenderer is not null && shouldFlash)
                     _spriteRenderer.enabled = !_spriteRenderer.enabled;
                 yield return new WaitForSeconds(flashDelay);
             }
 
-            if (_spriteRenderer is not null)
+            if (_spriteRenderer is not null && shouldFlash)
                 _spriteRenderer.enabled = true;
 
             isInvulnerable = false;

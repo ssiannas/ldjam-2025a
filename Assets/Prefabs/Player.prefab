@@ -133,6 +133,9 @@ MonoBehaviour:
   pointRate: 1
   maxLives: 3
   invulnerabilityDuration: 2
+  dashCdSec: 3
+  dashForce: 10
+  dashDuration: 0.2
 --- !u!50 &8790366289996233290
 Rigidbody2D:
   serializedVersion: 5

@@ -16,7 +16,7 @@ namespace ldjam_hellevator
         public float offset = 0.5f;
         public float difficultyThreshold = 0f;
         
-        private float spawnFrequencySec;
+        [SerializeField] private float spawnFrequencySec;
         public float SpawnFrequencySec
         {
             get => spawnFrequencySec;
@@ -30,7 +30,7 @@ namespace ldjam_hellevator
             }
         }
         
-        private float spawnProbability;
+        [SerializeField] private float spawnProbability;
         public float SpawnProbability
         {
             get => spawnProbability;
