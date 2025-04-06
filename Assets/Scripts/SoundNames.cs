@@ -6,5 +6,6 @@ namespace ldjam_hellevator
     public struct SoundNames
     {
         public static readonly string MainTheme = "main_theme";
+        public static readonly string OpeningTheme = "opening_theme";
     }
 }

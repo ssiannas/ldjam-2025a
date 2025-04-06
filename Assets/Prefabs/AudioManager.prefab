@@ -51,4 +51,10 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 1
+  - source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 0566a2f86e7a6a44b93ec9ec308b61dd, type: 3}
+    soundName: opening_theme
+    volume: 1
+    pitch: 1
+    loop: 0
   channel: {fileID: 11400000, guid: 39761e71ad1ac144b8f67e80d47a364c, type: 2}
