@@ -212,6 +212,10 @@ namespace ldjam_hellevator
             {
                 Die();
             }
+            else if (collision.gameObject.CompareTag("Floor"))
+            {
+                _isReturning = false;
+            }
         }
 
     }

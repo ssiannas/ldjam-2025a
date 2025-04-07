@@ -9,6 +9,7 @@ TagManager:
   - Demon1
   - Destructible
   - Killzone
+  - Floor
   layers:
   - Default
   - TransparentFX
