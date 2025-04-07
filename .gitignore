@@ -25,4 +25,5 @@ UserSettings/
 *.DS_Store
 *.apk
 *.keystore
+*.zip
 .DS_Store
