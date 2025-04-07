@@ -11,21 +11,24 @@ namespace ldjam_hellevator
         [Header("Obstacle Properties")]
         [SerializeField] private float spawnFrequencySecDefault = 0.5f;
         [SerializeField] private float spawnProbabilityDefault = 1.0f;
+        [SerializeField] private float minFrequencySec = 0.25f;
         
         public List<int> spawningLanes = new List<int>(){0, 1, 2, 3};
         public float offset = 0.5f;
         public float difficultyThreshold = 0f;
         
-        [SerializeField] private float spawnFrequencySec;
+            
+        [Header("Debug")] [SerializeField] 
+        private float spawnFrequencySec;
         public float SpawnFrequencySec
         {
             get => spawnFrequencySec;
             set
             {
                 spawnFrequencySec = value;
-                if (spawnFrequencySec < 0.25f)
+                if (spawnFrequencySec < minFrequencySec)
                 {
-                    spawnFrequencySec = 0.25f;
+                    spawnFrequencySec = minFrequencySec;
                 }
             }
         }
