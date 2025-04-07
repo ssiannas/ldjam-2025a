@@ -208,6 +208,10 @@ namespace ldjam_hellevator
             {
                 TakeDamage();
             }
+            else if (collision.gameObject.CompareTag("Killzone"))
+            {
+                Die();
+            }
         }
 
     }

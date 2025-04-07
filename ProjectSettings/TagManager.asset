@@ -8,6 +8,7 @@ TagManager:
   - Pillar
   - Demon1
   - Destructible
+  - Killzone
   layers:
   - Default
   - TransparentFX
