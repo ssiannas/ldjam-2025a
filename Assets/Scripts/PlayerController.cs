@@ -146,7 +146,6 @@ namespace ldjam_hellevator
             if (currentLives <= 0)
             {
                 Die();
-                Debug.Log("dead");
             }
             else
             {
