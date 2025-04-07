@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialPanel: {fileID: 0}
+  audioChannel: {fileID: 0}
 --- !u!4 &101819409
 Transform:
   m_ObjectHideFlags: 0
@@ -375,7 +376,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Welcome to Dave the HellDiver!
+  m_text: 'Wlcome to the Deepest Descent
 
 
     Those pesky prudes in Heaven cast

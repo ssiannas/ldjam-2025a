@@ -31,7 +31,6 @@ namespace ldjam_hellevator
 
         public void QuitGame()
         {
-            Debug.Log("Quitting game...");
             Application.Quit();
         }
     }

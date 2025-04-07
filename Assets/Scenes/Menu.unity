@@ -1673,7 +1673,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DAVE THE HELLDIVER
+  m_text: THE DEEPEST DESCENT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b3915bb6c08b8b040aef884b6af3f600, type: 2}
   m_sharedMaterial: {fileID: -5619106932048249319, guid: b3915bb6c08b8b040aef884b6af3f600, type: 2}

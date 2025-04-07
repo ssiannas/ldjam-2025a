@@ -11,6 +11,7 @@ namespace ldjam_hellevator
         public UnityAction<int> OnSetScore;
         public UnityAction OnResetScore;
         public Func<int> OnGetScore;    
+        public UnityAction OnStopCounting;
 
         public void AddPoints(int points)
         {
@@ -29,7 +30,12 @@ namespace ldjam_hellevator
         
         public int GetScore()
         {
-            return OnGetScore.Invoke();
+            return OnGetScore?.Invoke() ?? -1;
+        }
+
+        public void StopCounting()
+        {
+            OnStopCounting?.Invoke();
         }
     }
 }

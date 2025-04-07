@@ -168,6 +168,7 @@ namespace ldjam_hellevator
 
         private void Die()
         {
+            scoreManagerChannel.StopCounting();
             gameObject.SetActive(false);
             SceneManager.LoadScene("GameOver");
         }

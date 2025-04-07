@@ -1,3 +1,4 @@
+using Dan.Models;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -9,27 +10,21 @@ namespace ldjam_hellevator
         [FormerlySerializedAs("leaderBoardAPI")] [SerializeField]
         private LeaderBoardChannel leaderBoardChannel;
 
-        [SerializeField] 
-        private TextMeshProUGUI ScoresPrefab;
         [SerializeField]
-        private TextMeshProUGUI NamesPrefab;
+        private TextMeshProUGUI scoresTextField;
 
-        private GameObject _namesHolder;
-        private GameObject _scoresHolder;
+        [SerializeField] private int maxEntries = 5;
 
         [SerializeField]
-        private GameObject _errorMessage;
+        private TextMeshProUGUI errorMessage;
         [SerializeField]
-        private GameObject _leaderBoard;
+        private GameObject leaderBoard;
         
         [SerializeField]
         private ScoreManagerChannel scoreManagerChannel;
 
-        private void Awake()
+        private void Start()
         {
-            _scoresHolder = GameObject.FindWithTag("LeaderBoardScore");
-            _namesHolder = GameObject.FindWithTag("LeaderBoardName");
-            
             MaybeFetchEntries();
             if (leaderBoardChannel.LeaderBoardFailed)
             {
@@ -43,7 +38,6 @@ namespace ldjam_hellevator
             if (currentEntries.Length == 0) {
                 leaderBoardChannel.FetchLeaderBoard(OnLeaderBoardLoaded, OnLBFailed);
             } else {
-                Debug.Log("Entries are non zero");
                 OnLeaderBoardLoaded(currentEntries);
             }
 
@@ -51,40 +45,33 @@ namespace ldjam_hellevator
 
         public void UploadLeaderBoardEntry(TMP_InputField playerName)
         {
-            //this will work only in main scene, we will probably call it on the game over scene, that has no channel UNLESS
-            int score = scoreManagerChannel.GetScore();
-            string text = playerName.text.Trim().Normalize();
+            var score = scoreManagerChannel.GetScore();
+            var text = playerName.text.Trim().Normalize();
+            score = score > 0 ? score : 0;
             leaderBoardChannel.UploadLeaderBoardEntry(text, score, OnLeaderBoardLoaded, OnLBFailed);
         }
 
         private void EmptyBoard()
         {
-            foreach (Transform child in _namesHolder.transform)
-            {
-                Destroy(child.gameObject);
-            }
-            foreach (Transform child in _scoresHolder.transform)
-            {
-                Destroy(child.gameObject);
-            }
+            scoresTextField.text = "";
         }
 	
-        private void OnLBFailed(string _ = "")
+        private void OnLBFailed(string msg = "")
         {
-            _errorMessage.SetActive(true);
-            _leaderBoard.SetActive(false);
+            errorMessage.text = msg;
+            errorMessage.gameObject.SetActive(true);
+            leaderBoard.SetActive(false);
         }
 
-        private void OnLeaderBoardLoaded(Dan.Models.Entry[] entry)
+        private void OnLeaderBoardLoaded(Entry[] entry)
         {
             if (leaderBoardChannel.LeaderBoardFailed) return;
             EmptyBoard();
-            for (int i = 0; i < entry.Length; ++i)
+            var numEntries = Mathf.Min(entry.Length, maxEntries);
+            for (int i = 0; i < numEntries; ++i)
             {
-                var newName = Instantiate(NamesPrefab, _namesHolder.transform);
-                newName.GetComponent<TextMeshProUGUI>().text = entry[i].Username;
-                var newScore = Instantiate(ScoresPrefab, _scoresHolder.transform);
-                newScore.GetComponent<TextMeshProUGUI>().text = entry[i].Score.ToString();
+                var text = $"{i + 1}. {entry[i].Username} - {entry[i].Score}";
+                scoresTextField.text += text + "\n";
             }
         } 
     }

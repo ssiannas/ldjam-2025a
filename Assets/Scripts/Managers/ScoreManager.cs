@@ -17,6 +17,8 @@ namespace ldjam_hellevator
         
         [SerializeField] private ScoreManagerChannel scoreManagerChannel;
         
+        private bool isCounting = false;
+        
         private int _currentScore = 0;
         public int highScore = 0;
 
@@ -33,16 +35,23 @@ namespace ldjam_hellevator
             }
             scoreManagerChannel.OnAddPoints += AddPoints;
             scoreManagerChannel.OnGetScore = GetScore;
+            scoreManagerChannel.OnStopCounting += StopCounting;
+            isCounting = true;
             LoadHighScore();
             UpdateScoreDisplay();
             UpdateHighScoreDisplay();
+        }
+
+        private void StopCounting()
+        {
+            isCounting = false;
         }
         
         public void LateUpdate()
         {
             timer += Time.deltaTime;
 
-            if (timer >= scoreTimer)
+            if (timer >= scoreTimer && isCounting)
             {
                 AddPoints(1);
                 timer = 0f;
