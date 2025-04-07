@@ -17,7 +17,19 @@ namespace ldjam_hellevator
 
         void Awake()
         {
+            ResetDifficulty();
             scoreManagerChannel.OnGetDifficultyLevel = () => _currentLevel;
+        }
+
+        private void ResetDifficulty()
+        {
+            _currentLevel = 0;
+            foreach (var obstacle in obstacles)
+            {
+                obstacle.SpawnFrequencySec = obstacle.spawnFrequencySecDefault;
+                obstacle.SpawnProbability = obstacle.spawnProbabilityDefault;
+            }
+            wallData.currentWallSpeed = wallData.baseWallSpeed;
         }
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()

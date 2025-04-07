@@ -9,8 +9,8 @@ namespace ldjam_hellevator
         [Header("Obstacle Prefab")] [SerializeField]
         public GameObject prefab;
         [Header("Obstacle Properties")]
-        [SerializeField] private float spawnFrequencySecDefault = 0.5f;
-        [SerializeField] private float spawnProbabilityDefault = 1.0f;
+        public float spawnFrequencySecDefault = 0.5f;
+        public float spawnProbabilityDefault = 1.0f;
         [SerializeField] private float minFrequencySec = 0.25f;
         
         public List<int> spawningLanes = new List<int>(){0, 1, 2, 3};
