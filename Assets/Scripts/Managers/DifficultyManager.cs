@@ -14,7 +14,11 @@ namespace ldjam_hellevator
 
         [SerializeField] private List<Obstacle> obstacles;
         [SerializeField] private WallData wallData;
-        
+
+        void Awake()
+        {
+            scoreManagerChannel.OnGetDifficultyLevel = () => _currentLevel;
+        }
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
@@ -24,10 +28,10 @@ namespace ldjam_hellevator
         // Update is called once per frame
         void Update()
         {
-           var newLevel = scoreManagerChannel.GetScore() / difficultyIncreaseInterval;
+           var newLevel = (int)scoreManagerChannel.GetDepth() / difficultyIncreaseInterval;
            if (newLevel != _currentLevel)
            {
-               _currentLevel = newLevel;
+               _currentLevel = (int)newLevel;
                AdjustDifficulty(_currentLevel);
            }
         }
@@ -37,7 +41,7 @@ namespace ldjam_hellevator
         {
             foreach (var obstacle in obstacles)
             {
-                if (scoreManagerChannel.GetScore() >= obstacle.difficultyThreshold)
+                if (scoreManagerChannel.GetDepth() >= obstacle.difficultyThreshold)
                 {
                     obstacle.SpawnFrequencySec -= (level * 0.05f);
                     obstacle.SpawnProbability += (level * 0.005f);

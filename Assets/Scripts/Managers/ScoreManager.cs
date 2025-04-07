@@ -22,6 +22,7 @@ namespace ldjam_hellevator
         private int _currentScore = 0;
         public int highScore = 0;
 
+        private float _depth = 0;
         private float timer;
         public float scoreTimer = 1.5f;
 
@@ -36,6 +37,7 @@ namespace ldjam_hellevator
             scoreManagerChannel.OnAddPoints += AddPoints;
             scoreManagerChannel.OnGetScore = GetScore;
             scoreManagerChannel.OnStopCounting += StopCounting;
+            scoreManagerChannel.OnGetDepth += () => _depth;
             isCounting = true;
             LoadHighScore();
             UpdateScoreDisplay();
@@ -53,7 +55,8 @@ namespace ldjam_hellevator
 
             if (timer >= scoreTimer && isCounting)
             {
-                AddPoints(1);
+                _depth += 1f;
+                AddPoints(1 + scoreManagerChannel.GetDifficultyLevel());
                 timer = 0f;
             }    
         }
@@ -72,7 +75,6 @@ namespace ldjam_hellevator
 
             UpdateScoreDisplay();
         }
-
 
         public void SetScore(int score)
         {

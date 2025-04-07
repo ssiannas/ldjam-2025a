@@ -15,4 +15,4 @@ MonoBehaviour:
   baseWallSpeed: 1.5
   maxWallSpeed: 5
   wallSpeedIncreaseRate: 0.5
-  currentWallSpeed: 2.5
+  currentWallSpeed: 1.5
