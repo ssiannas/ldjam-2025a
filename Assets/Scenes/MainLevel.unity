@@ -465,9 +465,17 @@ PrefabInstance:
       propertyPath: highScoreText
       value: 
       objectReference: {fileID: 1029144874}
+    - target: {fileID: 6281474108565357720, guid: 079fe1ac25750b34ea754e059545aa65, type: 3}
+      propertyPath: difficultyIncreaseInterval
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8326693017351131519, guid: 079fe1ac25750b34ea754e059545aa65, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8326693017351131519, guid: 079fe1ac25750b34ea754e059545aa65, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

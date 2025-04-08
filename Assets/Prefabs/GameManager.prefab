@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &770101953681588711
 Transform:
   m_ObjectHideFlags: 0
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreManagerChannel: {fileID: 11400000, guid: 3809418ae24f3bd4f9cd7def0c688f9c, type: 2}
-  difficultyIncreaseInterval: 10
+  difficultyIncreaseInterval: 15
   obstacles:
   - {fileID: 11400000, guid: f2444d5042a8caa44aef46330ed0ec2d, type: 2}
   - {fileID: 11400000, guid: 49505cdf86f04684b896e18cc71bea49, type: 2}

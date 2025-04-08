@@ -15,9 +15,9 @@ MonoBehaviour:
   prefab: {fileID: 6472464292656940515, guid: a8d8f5996135e2c42bc7537a2235849f, type: 3}
   spawnFrequencySecDefault: 4.5
   spawnProbabilityDefault: 0.55
-  minFrequencySec: 0.5
+  minFrequencySec: 0.7
   spawningLanes: 00000000010000000200000003000000
   offset: 0
   difficultyThreshold: 14
-  spawnFrequencySec: 1.8000002
-  spawnProbability: 0.77
+  spawnFrequencySec: 4.5
+  spawnProbability: 0.55

@@ -55,8 +55,8 @@ namespace ldjam_hellevator
             {
                 if (scoreManagerChannel.GetDepth() >= obstacle.difficultyThreshold)
                 {
-                    obstacle.SpawnFrequencySec -= (level * 0.05f);
-                    obstacle.SpawnProbability += (level * 0.005f);
+                    obstacle.SpawnFrequencySec -= (level * 0.03f);
+                    obstacle.SpawnProbability += (level * 0.004f);
                 }
             }
             
